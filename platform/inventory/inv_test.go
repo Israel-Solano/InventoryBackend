@@ -9,7 +9,6 @@ func TestAdd(t *testing.T) {
 	if len(inv.InvItems) != 1 {
 		t.Errorf("Item was not added")
 	}
-
 }
 
 func TestGetAll(t *testing.T) {
