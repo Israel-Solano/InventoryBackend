@@ -15,7 +15,9 @@ func main() {
 	r.GET("/ping", handler.PingGet())
 	r.GET("/inventory", handler.InventoryGet(inv))
 	r.POST("/inventory", handler.InventoryPost(inv))
-	r.DELETE("/inventory", handler.InventoryPost(inv))
+	r.DELETE("/inventory", handler.InventoryDel(inv))
+	r.RENAME("/inventory", handler.InventoryRename(inv))
+	r.RELOCATE("/inventory", handler.InventoryRelocate(inv))
 
 	r.Run()
 

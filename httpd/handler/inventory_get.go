@@ -18,9 +18,9 @@ func InventoryGet(inv inventory.Getter) gin.HandlerFunc {
 //create items within a container
 //add containers/transversing them
 
-//rename containers and items
-//delete items
-//add pointers to previous and top
+//rename and relocate items (done)
+//delete items (thursday)
+//add pointers to previous and top (Maybe by tuesday)
 
 //parse urls to figure what container we're in
 

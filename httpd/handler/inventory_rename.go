@@ -12,7 +12,7 @@ type InvRequest struct {
 	Location string `json:"Location"`
 }
 
-func InventoryDel(inv inventory.Deleter) gin.HandlerFunc {
+func InventoryRename(inv inventory.renamer) gin.HandlerFunc {
 	return func(c *gin.Context) {
 		requestBody := InvRequest{}
 		c.Bind(&requestBody)
@@ -21,7 +21,7 @@ func InventoryDel(inv inventory.Deleter) gin.HandlerFunc {
 			Name:     requestBody.Name,
 			Location: requestBody.Location,
 		}
-		inv.delete(invItem)
+		inv.rename(invItem)
 		c.Status(http.StatusNoContent)
 
 	}
